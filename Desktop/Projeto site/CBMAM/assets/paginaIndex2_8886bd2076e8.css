@@ -1,0 +1,352 @@
+.centralizar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.acesso{
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+  line-height: 1.7rem;
+}
+
+.enfase{
+  text-align: center;
+  text-decoration: underline !important;
+  font-weight: bold;
+}
+
+.enfase2{
+  text-align: justify;
+  font-weight: 800;
+}
+
+.enfase3{
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #cccccc;
+  font-weight: bold;
+}
+
+p a{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: blue;
+}
+
+p b{
+  text-decoration: underline !important;
+}
+
+
+/*  MODAL  */
+.modal {
+  /* display: none; Esconder por padrão */
+  position: fixed; /* Posição fixa */
+  z-index: 1; /* Z-index (garante que a janela modal esteja no topo de outras partes da página) */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  overflow: auto; /* Ative o rolagem se necessário */
+  background-color: rgba(0,0,0,0.4); /* Fundo escuro semi-transparente */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centralize o modal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Defina a largura do modal */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#titulo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  text-align: center;
+}
+
+#titulo h3{
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cartao{
+  height: 260px;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  background-color: #ebfff5;
+  margin: 30px;
+  border-radius: 20px;
+  box-shadow: #161616 0px 5px 5px;
+
+  transition: all .3s ease;
+}
+
+.cartao:hover{
+  transform: translateY(-10px);
+  box-shadow: #161616 0px 15px 15px;
+}
+
+.cartao img{
+  width: 75px;
+  height: 75px;
+  transition: all .3s ease;
+  margin: 20px 0;
+}
+
+.cartao:hover> img{
+  width: 100px;
+  height: 100px;
+}
+
+.cartao p{
+  width: 270px;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+}
+
+.cartao a{
+  background-color: #999999;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  color: #000;
+  transition: all .3s ease;
+}
+
+.cartao a:hover{
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+}
+
+.revista{
+  text-decoration: underline;
+  color: blue;
+}
+
+.bombeiroMirim{
+  max-width: 50%; /* A largura máxima da imagem é de 100% da largura do contêiner pai */
+  height: auto; /* A altura é ajustada automaticamente para manter a proporção original */
+  display: block; /* Remove espaço extra sob a imagem */
+  margin: 0 auto; /* Centraliza horizontalmente a imagem */
+  border-radius: 10px;
+}
+
+.bm_mirim{
+  display: flex; /* Usando flexbox para alinhar as divs internas */
+   flex-direction: column; /* Empilhar divs verticalmente */
+   align-items: center; /* Alinhar as divs internas horizontalmente (opcional) */
+   margin: 10px; /* Margem externa da div principal */
+   /* Adicione mais estilos conforme necessário */
+    /* background-color: lightgray;*/
+   padding-top: 10px;
+   padding-bottom: 10px;  
+
+   display: none;
+}
+
+.transparencia{
+  max-width: 100%; /* A largura máxima da imagem é de 100% da largura do contêiner pai */
+  height: auto; /* A altura é ajustada automaticamente para manter a proporção original */
+  display: block; /* Remove espaço extra sob a imagem */
+  margin: 0 auto; /* Centraliza horizontalmente a imagem */
+  border-radius: 10px;
+  padding-top: 2rem;
+}
+
+/* Estilo para a div principal */
+.cancao {
+   display: flex; /* Usando flexbox para alinhar as divs internas */
+   flex-direction: column; /* Empilhar divs verticalmente */
+   align-items: center; /* Alinhar as divs internas horizontalmente (opcional) */
+   margin: 20px; /* Margem externa da div principal */
+   /* Adicione mais estilos conforme necessário */
+   background-color: lightgray;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+
+/* Estilo para as divs internas (elementos) */
+.elements {
+   margin: 10px 0; /* Espaçamento externo (margem) entre as divs internas na vertical */
+   /* Adicione mais estilos conforme necessário */
+}
+
+.imagem-estilizada{
+  max-width: 100px;
+}
+
+.noticia_fixa{
+  max-width: 100%; /* A largura máxima da imagem é de 100% da largura do contêiner pai */
+  height: auto; /* A altura é ajustada automaticamente para manter a proporção original */
+  display: block; /* Remove espaço extra sob a imagem */
+  margin: 0 auto; /* Centraliza horizontalmente a imagem */
+  border-radius: 10px;
+}
+
+.noticia_fixa{
+  margin-bottom: 10px;
+}
+
+.convocacao{
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+.banerGrande{
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+.convocacaos{
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.convocacao a{
+  font-size: 2rem;
+}
+
+.convocacao img {
+  border-radius: 25px;
+  max-width: 100%;
+  height: 180px;
+}
+.banerGrande img {
+  border-radius: 10px;
+   max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 768px) 
+{
+  .convocacao img {
+  border-radius: 10px;
+  max-width: 100%;;
+  height: 90px;
+}
+.banerGrande img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+.convocacao {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.convocacao a {
+    font-size: 16px;
+}
+}
+@media only screen and (max-width: 600px) 
+{
+  .convocacao img {
+  border-radius: 10px;
+  max-width: 600px;
+  height: 60px;
+}
+ .banerGrande img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+}
+
+@media only screen and (max-width: 425px) 
+{
+  .convocacao img {
+  border-radius: 5px;
+  max-width: 400px;
+  height: 60px;
+}
+.banerGrande img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+body {
+    padding-left: 2px;
+     padding-right: 2px;
+}
+
+}
+@media only screen and (max-width: 320px) 
+{
+  .convocacao img {
+  border-radius: 5px;
+  max-width: 50px;
+  height: 35px;
+}
+.banerGrande img {
+ border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+}
+.banner_work img {
+  
+  max-width: 800px;
+  height:600px;
+}
+
+
+/*CSS gerado pelo chatGpt para ajustar o banner do proebom 2025 na página incial do site do cbmam*/
+.proebom_25 {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente (opcional) */
+  margin: 20px auto; /* Espaçamento em torno */
+}
+
+.proebom_25 img {
+  max-width: 80%; /* Ajusta o tamanho da imagem à tela */
+  height: auto; /* Mantém a proporção da imagem */
+  max-height: 400px; /* Limita a altura máxima em telas grandes */
+}

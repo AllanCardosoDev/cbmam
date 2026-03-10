@@ -1,0 +1,116 @@
+footer{
+  height: auto;
+  width: 100%;
+
+  background-color: #191919;
+
+  font-size: 16px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container do footer*/
+#footerContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.footerItens{
+  display: block;
+
+  list-style: none;
+
+  margin: 30px;
+  padding: 0;
+
+  width: 190px;
+  height: 190px;
+}
+.footerItens2{
+  display: block;
+
+  list-style: none;
+
+  margin: 10px;
+  padding: 0;
+
+  width: auto;
+  height: 190px;
+}
+
+/*Itens */
+.footerTitle{
+  margin-bottom: 16px;
+}
+
+/* Itens */
+footer div div h4{
+  line-height: 1.2;
+
+  width: min-content;
+
+  transition: border-bottom .2s ease, margin-left .7s ease;
+
+  height: 20px;
+}
+
+footer div div h4:hover{
+  margin-left: 10px;
+
+  border-bottom: 2px solid #e91e63;
+}
+
+/* Formatando copyright */
+#copyright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  width: 100%;
+  height: 80px;
+}
+
+/* Dando espaço entre os itens e seus subitens */
+footer div div ul li{
+  margin-bottom: 5px;
+}
+
+/* Arrumando o tamanho dos sub itens*/
+footer div div ul li a{
+  width: 100%;
+  height: 16px;
+  transition: all .5s ease;
+}
+
+/* Animação de ir para direita*/
+footer div div ul li a:hover{
+  padding-left: 8px;
+}
+@media (max-width: 425px) {
+   footer{
+  height: auto;
+  width: 100%;
+
+  background-color: #191919;
+
+  font-size: 14px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  align-items: center;
+}
+}

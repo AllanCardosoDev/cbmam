@@ -1,0 +1,431 @@
+@import url("css2_ec49454dca08.css");
+/* Resetando todos os padrões */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+  text-decoration: none;
+  color: inherit;
+
+  list-style: none;
+}
+
+/* Dando espaço para o main */
+header{
+  margin-bottom: 0px;
+
+}
+
+/* Mexendo no header */
+.top-container{
+  width: 100%;
+  margin: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Retirando os itens responsivos */
+.toggle, [id^=drop]{
+  display: none;
+}
+
+/* Mexendo na NavBar */
+nav{
+  position: absolute;
+
+  width: 100%;
+  height: 80px;
+
+  top: 0;
+  left: 0;
+
+  background-color: #000;
+
+  z-index: 100;
+
+  color: white;
+}
+
+/* Modificando a logo */
+.logo img{
+  margin: 5px 10px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.logo img:hover{
+  transition: all 0.3s ease;
+  height: 75px;
+  margin-left: 3px;
+}
+
+/* Mexendo no menu de navegação primário */
+nav ul{
+  list-style: none;
+
+  position: relative;
+
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+
+/* Mexendo nos itens de navegação */
+nav ul li{
+  float: left;
+
+  background: #000;
+
+  display: inline-block;
+
+}
+
+/* Alinhando os itens */
+nav ul a{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+
+  height: 80px;
+
+  color: #fff;
+  font-size: 14px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+/* Aplicando a transição de background-color no hover*/
+nav ul li ul li:hover{
+  transition: .5s;
+
+  background-color: #191919;
+}
+
+nav ul a:hover{
+  transition: all .5s ease;
+
+  font-size: 16px;
+  background-color: #191919;
+}
+
+/* Escondendo e posicionando os sub-itens de navegação*/
+nav ul ul{
+  display: none;
+  position: absolute;
+
+  top: 80px;
+}
+
+/* Mostrando os sub-itens no hover*/
+nav ul li:hover > ul{
+  display: inherit;
+}
+
+/* Dimensionando os sub-itens de navegação*/
+nav ul ul li{
+  display: list-item;
+
+  width: 170px;
+
+  float: none;
+
+  position: relative;
+}
+
+/*css da nav do governo*/
+.gov{
+
+  height: 80px !important;
+  background-color: #135763;
+
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+
+  text-transform: uppercase;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+/*  background-color: #f0f0f0; /* Altere a cor de fundo conforme necessário */*/
+  z-index: 999; /* Define a ordem de empilhamento, se necessário */
+
+}
+
+.gov div {
+  padding: 0 2vw;
+}
+
+.gov a:hover {
+  text-decoration: underline;
+}
+
+.gov:nth-child(1){
+  top: 0;
+}
+
+.cbmam:nth-child(2){
+  top: 80px;
+}
+
+.gov img {
+  height: 50px;
+  width: auto;
+}
+
+
+
+/*termino do css da nav do governo*/
+.btn-link {
+    align-items: center;
+    background-color: initial;
+    border: 1px solid #0000;
+    border-radius: .25rem;
+    color: #212529;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1.5;
+    padding: .3rem .2rem;
+    text-align: center;
+}
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+}
+.btn-link img {
+  height: 20px;
+  width: auto;
+}
+.governo div {
+  float: left;
+
+}
+.cbmam1 div{
+  float: left;
+}
+/* Transformando o menu responsivo*/
+@media all and (max-width: 1024px){
+  
+  /* Mexendo no top-container */
+  .top-container {
+    display: block;
+  }
+  /* Redimensionando a logo */
+  .logo img{
+    height: 80px;
+  }
+
+  /* Mexendo na area da URL da logo*/
+  .logo a{
+    float: left;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 80px;
+  }
+
+  /* Mexendo no botão menu */
+  .btn-menu{
+    font-size: 24px !important;
+    float: right;
+
+    cursor: pointer;
+
+    height: 80px !important;
+
+    padding: 0 15px!important;
+
+    display: flex!important;
+
+    align-self: center;
+  }
+
+  /* Escondendo o menu */
+  .toggle + a, .menu{
+    display: none;
+  }
+
+  /* Mexendo nos itens escondidos */
+  .toggle{
+    display: flex;
+    align-items: center;
+
+    background-color: #000;
+    color: #fff;
+
+    font-size: 14px;
+    text-decoration: none;
+
+    border: 0;
+
+    padding: 0 15px;
+
+    height: 80px;
+  }
+
+  /* Aplicando mudança de background no hover */
+  .toggle:hover{
+    transition: .5s;
+
+    background-color: #191919;
+  }
+
+  /* Reaplicando background PRETO no menu */
+  .btn-menu:hover{
+    background-color: #000;
+  }
+
+  /* Mostrando os sub-itens ao clicar no itens de navegação */
+  [id^=drop]:checked + ul{
+    text-transform: uppercase;
+    display: block;
+
+    background-color: #404040;
+    transition: .5s;
+  }
+
+  /* Redimensionando os itens */
+  nav ul li{
+    display: block;
+
+    width: 100%;
+  }
+
+  /* Aplicando a animação de hover */
+  nav ul a:hover{
+    transition: .5s;
+    background-color: #191919;
+  }
+
+  /* Mudando a cor */
+  nav ul ul a{
+    color: #fff;
+  }
+
+  /* Modificando os sub-itens para ficar estilo listas*/
+  nav ul ul{
+    float: none;
+
+    position: static;
+
+    color: #fff;
+  }
+
+  /* Redefinindo o hover dos itens, para que os sub-itens não apareçam (Pois ja aparecem ao checked do drop)*/
+  nav ul li:hover > ul{
+    display: none;
+  }
+
+  /* Tamanho dos sub-itens*/
+  nav ul ul li{
+    display: block;
+
+    width: 100%;
+
+    background-color: #191919;
+  }
+}
+.empty {
+        border: 1px dashed #d1d5db;
+        border-radius: 14px;
+        padding: 18px;
+        background: #f3f4f6;
+        color: var(--muted);
+    }
+    button {
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 12px;
+    background: #135763;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+}
+form.search {
+    display: flex
+;
+    gap: 8px;
+    
+
+}
+input[type="text"] {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: #ffffff;
+    color: var(--text);
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color .2s;
+}
+@media (max-width: 768px) {
+  
+    .layout_geral_fixo {   
+    border-spacing: 0;
+    border-collapse: collapse;
+   white-space: normal;
+    z-index: 6;
+    height: 80px;
+}
+   .gov{
+
+  height:auto;
+}
+.btn-link {
+   
+    padding: 0px;
+    
+}
+td{
+   
+    padding: 0px;
+    
+}
+}
+@media (max-width: 425px) {
+   img {
+  height: 10px;
+  width: auto;
+}
+  
+   .gov{
+
+  height:auto;
+}
+.btn-link {
+   
+    padding: 1px;
+    
+}
+.logo img {
+        height: 60px;
+    }
+}
+  @media all and (max-width: 370px){
+    .gov{
+
+  height:auto;
+}
+    .logo a{
+      float: left;
+  
+      display: flex;
+  
+      align-items: center;
+  
+      height: 50px;
+    }
+    .logo img{
+      height: 50px;
+    }
+  }
