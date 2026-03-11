@@ -1,526 +1,611 @@
-:root{
-  --bg: #0b1220;
-  --surface: #111b2e;
-  --surface2: #0f172a;
-  --text: #e7eefc;
-  --muted: #b8c4de;
-  --brand: #ef4444;
-  --brand2: #22c55e;
-  --line: rgba(255,255,255,.12);
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<title>CBMAM - Corpo de Bombeiros Militar do Amazonas</title>
+<meta content="Corpo de Bombeiros Militar do Amazonas - Site Oficial" name="description"/>
+<link href="assets/favicon_76559e6b2e38.ico" rel="icon" type="image/x-icon"/>
+<link href="assets/favicon_76559e6b2e38.ico" rel="shortcut icon" type="image/x-icon"/>
+<!-- New Design CSS -->
+<link href="assets/redesign.css" rel="stylesheet"/>
+<!-- Carousel CSS -->
+<link href="assets/carousel_90242aea6c48.css" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="assets/all_cabf23deb79f.css" rel="stylesheet"/>
+<!-- jQuery -->
+<script src="assets/jquery-3_3a66d0e58952.js"></script>
+<script src="assets/jquery_37c0241c437e.js"></script>
+</head>
+<body>
 
-  --radius: 14px;
-  --shadow: 0 12px 28px rgba(0,0,0,.35);
+<!-- ===== SKIP LINKS (Acessibilidade) ===== -->
+<a class="skip-link" href="#content" accesskey="1">Ir para Conteúdo</a>
+<a class="skip-link" href="#navigation" accesskey="2">Ir para Navegação</a>
+<a class="skip-link" href="#search" accesskey="3">Ir para Busca</a>
+<a class="skip-link" href="#footer" accesskey="4">Ir para Rodapé</a>
 
-  --container: 1160px;
+<header>
 
-  /* acessibilidade: tamanho base controlável por JS */
-  --fontScale: 1;
-}
+<!-- ========== LAYER 1: GOV BAR ========== -->
+<section class="headerGov">
+  <div class="container">
+    <a class="govBrand" href="https://www.amazonas.am.gov.br" target="_blank" title="Governo do Amazonas">
+      <img alt="Governo do Amazonas" src="assets/brasao_gov_1a0505918225.png"/>
+    </a>
+    <div class="gov-links">
+      <div class="gov-accessibility">
+        <a class="btn-link" href="https://www.transparencia.am.gov.br/acessibilidade/" target="_blank" title="Atalhos e acessibilidade">
+          <img alt="Acessibilidade" src="assets/acessibility_b68c093c3c5b.svg"/>
+        </a>
+        <button class="btn-link" id="btnHighlight" title="Destacar links">
+          <img alt="Destacar links" src="assets/highlight_links_5522d07e62c1.svg"/>
+        </button>
+        <a class="btn-link" href="#" title="Ativar ou desativar contraste de cores" id="btnContraste">
+          <img alt="Contraste" src="assets/contrast_f4e36333458f.svg"/>
+        </a>
+        <button class="btn-link" id="btnAumentar" title="Aumentar texto">
+          <img alt="Aumentar texto" src="assets/text_increase_103847d47e4c.svg"/>
+        </button>
+        <button class="btn-link" id="btnnormal" title="Restaurar tamanho do texto">
+          <img alt="Restaurar texto" src="assets/text_normalize_0dfdcba51e14.svg"/>
+        </button>
+        <button class="btn-link" id="btnDiminuir" title="Diminuir texto">
+          <img alt="Diminuir texto" src="assets/text_decrease_a2feee72be52.svg"/>
+        </button>
+        <a class="btn-link" href="https://www.cbm.am.gov.br/cbmam/paginas/mapa" title="Mapa do Site">
+          <img alt="Mapa do site" src="assets/map_05637faaec4f.svg"/>
+        </a>
+      </div>
+      <div class="gov-external-links">
+        <a href="https://www.transparencia.am.gov.br" target="_blank">Portal da Transparência</a>
+        <a href="https://diario.imprensaoficial.am.gov.br/" target="_blank">Diário Oficial</a>
+        <a href="https://falabr.cgu.gov.br/web/AM/" target="_blank">
+          <img alt="Fala.BR" src="assets/fala_br_a06dea8fe496.svg"/>
+          Ouvidoria / Acesso à Informação
+        </a>
+        <a href="https://radardatransparencia.atricon.org.br/" target="_blank">
+          <img alt="Radar" src="assets/radar_c27da91e4a6f.svg"/>
+          Radar da Transparência
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-*{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
-body{
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-size: calc(16px * var(--fontScale));
-  line-height: 1.5;
-  color: var(--text);
-  background: radial-gradient(1200px 700px at 30% -10%, rgba(239, 68, 68, .18), transparent 60%),
-              radial-gradient(1000px 600px at 90% 0%, rgba(34, 197, 94, .14), transparent 55%),
-              var(--bg);
-}
+<!-- ========== LAYER 2: INSTITUTIONAL HEADER ========== -->
+<section class="headerSec">
+  <div class="container">
+    <a class="site-brand" href="#">
+      <div class="site-logo">
+        <img alt="CBMAM" src="assets/logo_cbmam_branca_4b38b412fa7a.png"/>
+      </div>
+      <div class="site-info">
+        <p class="site-title">CBMAM</p>
+        <div class="site-desc">Corpo de Bombeiros Militar do Amazonas</div>
+      </div>
+    </a>
+    <div class="site-right">
+      <div class="social-links">
+        <a class="socialItem" href="https://www.instagram.com/bombeiroscbmam/" target="_blank" title="Instagram CBMAM">
+          <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+          <span class="sr-only">Instagram</span>
+        </a>
+      </div>
+      <div class="search-box" id="search">
+        <form action="https://www.cbm.am.gov.br/cbmam/paginas/pesquisa" class="search-form" method="get" role="search">
+          <input class="search-input" name="q" placeholder="Pesquisar..." required type="search"/>
+          <input class="search-submit" type="submit" value="Buscar"/>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-a{ color: inherit; text-decoration: none; }
-a:hover{ text-decoration: underline; }
-img, video{ max-width: 100%; display: block; }
-button{ font: inherit; }
+<!-- ========== LAYER 3: NAV MENU ========== -->
+<section class="headerMenu" id="navigation">
+  <div class="container">
+    <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Abrir menu">☰</button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#">Início</a></li>
+      <li>
+        <a href="#">Instituição ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Nossa Missão</a></li>
+          <li><a href="#">Comando</a></li>
+          <li><a href="#">Legislação</a></li>
+          <li><a href="#">Concurso</a></li>
+          <li><a href="#">Manuais</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Projetos ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">ProeBom</a></li>
+          <li><a href="#">Terceira Chama</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Serviços</a></li>
+      <li class="active">
+        <a href="#">Acesso à Informação ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">CBMAM / FUNESBOM</a></li>
+          <li><a href="#">CBMAM</a></li>
+          <li><a href="#">FUNESBOM</a></li>
+          <li><a href="#">Agenda do CMT-Geral</a></li>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/paginas/relatorio">Relatório de Auditoria</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Público Interno ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="https://drhsistema-production.up.railway.app/" target="_blank">Sistema de Férias</a></li>
+          <li><a href="https://gestao-cbm.ssp.am.gov.br/softexpert/login" target="_blank">Se Suite</a></li>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/transparencias/index2">ADM Transparência</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#">Agenda</a></li>
+    </ul>
+  </div>
+</section>
 
-/* util */
-.container{
-  width: min(var(--container), calc(100% - 32px));
-  margin-inline: auto;
-}
-.sr-only{
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0);
-  white-space: nowrap; border: 0;
-}
-.muted{ color: var(--muted); font-size: .95em; }
+</header>
 
-.skip-link{
-  position: absolute;
-  left: -999px; top: 10px;
-  background: #fff;
-  color: #111;
-  padding: 10px 12px;
-  border-radius: 10px;
-  z-index: 9999;
-}
-.skip-link:focus{ left: 10px; outline: 3px solid var(--brand); }
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content" id="content">
+<div class="container">
+<div class="content-area">
 
-/* Govbar */
-.govbar{
-  background: rgba(255,255,255,.05);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(8px);
-}
-.govbar__inner{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 10px 0;
-  flex-wrap: wrap;
-}
-.govbar__brand{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-}
-.brand-mark{
-  width: 32px; height: 32px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--brand), #fb7185);
-  box-shadow: 0 10px 20px rgba(239,68,68,.25);
-}
-.govbar__links{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.chip{
-  border: 1px solid var(--line);
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.12);
-}
-.a11y-tools{ display: inline-flex; gap: 8px; }
-.iconBtn{
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
-  color: var(--text);
-  padding: 6px 10px;
-  border-radius: 999px;
-  cursor: pointer;
-}
-.iconBtn:focus-visible,
-.chip:focus-visible{
-  outline: 3px solid rgba(239,68,68,.55);
-  outline-offset: 2px;
-}
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs" aria-label="breadcrumb">
+    <a href="#">Início</a>
+    <span class="separator">›</span>
+    <span>Página Inicial</span>
+  </nav>
 
-/* Top head */
-.tophead{ background: rgba(17, 27, 46, .8); border-bottom: 1px solid var(--line); }
-.tophead__inner{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px 0;
-  flex-wrap: wrap;
-}
-.brand{ display: flex; gap: 14px; align-items: center; min-width: 260px; }
-.brand__logo{
-  width: 54px; height: 54px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(34,197,94,.9), rgba(59,130,246,.75));
-  box-shadow: var(--shadow);
-}
-.brand__title{ font-size: 1.2em; font-weight: 800; letter-spacing: .3px; }
-.brand__subtitle{ color: var(--muted); font-size: .95em; }
+  <h1 class="page-title">Corpo de Bombeiros Militar do Amazonas</h1>
 
-.tophead__right{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex: 1;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-.social__link{
-  border: 1px solid var(--line);
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.12);
-}
-.search{ display: flex; gap: 8px; }
-.search__input{
-  width: min(420px, 60vw);
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.18);
-  color: var(--text);
-}
-.search__btn{
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: rgba(239,68,68,.15);
-  color: var(--text);
-  cursor: pointer;
-}
+  <!-- Banner Principal -->
+  <div class="banner-section">
+    <a href="#"><img alt="Emergência 193" src="assets/emergencia_193_9324121ff595.jpeg"/></a>
+  </div>
 
-/* Nav */
-.navwrap{
-  background: rgba(15, 23, 42, .9);
-  border-bottom: 1px solid var(--line);
-}
-.navwrap__inner{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
-}
-.menuToggle{
-  display: none;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
-  color: var(--text);
-  padding: 10px 12px;
-  border-radius: 12px;
-  cursor: pointer;
-}
-.menuToggle__icon{
-  width: 18px; height: 12px;
-  background:
-    linear-gradient(var(--text), var(--text)) 0 0/100% 2px no-repeat,
-    linear-gradient(var(--text), var(--text)) 0 50%/100% 2px no-repeat,
-    linear-gradient(var(--text), var(--text)) 0 100%/100% 2px no-repeat;
-}
-.nav{ flex: 1; }
-.nav__list{
-  list-style: none;
-  margin: 0; padding: 0;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.nav__link{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid transparent;
-}
-.nav__link:hover{ background: rgba(255,255,255,.06); text-decoration: none; }
-.nav__link.is-active{ border-color: rgba(239,68,68,.5); background: rgba(239,68,68,.08); }
+  <!-- Banner Concurso -->
+  <div class="banner-section">
+    <a href="https://www.cbm.am.gov.br/cbmam/paginas/concurso">
+      <img alt="Concurso" src="assets/concurso_banner_34f0ab30ed54.jpeg"/>
+    </a>
+  </div>
 
-.nav__item{ position: relative; }
-.nav__linkBtn{
-  cursor: pointer;
-  background: transparent;
-  color: var(--text);
-  border: 0;
-  border-radius: 12px;
-}
-.subnav{
-  list-style: none;
-  margin: 0; padding: 8px;
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  min-width: 220px;
-  background: rgba(17, 27, 46, .98);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  display: none;
-}
-.subnav a{
-  display: block;
-  padding: 10px 10px;
-  border-radius: 10px;
-}
-.subnav a:hover{ background: rgba(255,255,255,.06); text-decoration: none; }
-.nav__item--open > .subnav{ display: block; }
+  <!-- ============================================ -->
+  <!-- CARROSSEL DE NOTÍCIAS -->
+  <!-- ============================================ -->
+  <div class="carousel-section">
+    <div class="wrapper carrousel">
+      <div class="slide-wrapper" data-slide="wrapper">
+        <button class="slide-nav-button slide-nav-previous fas fa-chevron-left" data-slide="nav-previous-button"></button>
+        <button class="slide-nav-button slide-nav-next fas fa-chevron-right" data-slide="nav-next-button"></button>
+        <div class="slide-list" data-slide="list">
+          <a data-index="0" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/CBMAM_FOTO_PAULO_BAHIA__1__8aa647fe6457.jpeg"/>
+              <div class="slide-description">
+                <h3>Mais de 900 bombeiros mirins de 18 cidades do Amazonas iniciam o ano letivo de 2026</h3>
+                <p>O programa educacional alcança crianças e adolescentes de 8 a 14 anos</p>
+              </div>
+            </div></div>
+          </a>
+          <a data-index="1" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/WhatsApp_Image_2026-03-05_at_1_f52d7daf59da.jpeg"/>
+              <div class="slide-description">
+                <h3>Novos soldados do Corpo de Bombeiros do Amazonas celebram conquista após 10 meses de formação</h3>
+                <p>Formatura de 210 militares marca nova etapa na carreira dos profissionais</p>
+              </div>
+            </div></div>
+          </a>
+          <a data-index="2" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/WhatsApp_Image_2026-03-04_at_2_46418fab5355.jpeg"/>
+              <div class="slide-description">
+                <h3>Governador Wilson Lima forma 210 novos bombeiros e amplia efetivo da corporação</h3>
+                <p>Crescimento do efetivo e implantação de novas bases ampliaram presença do CBMAM de 11 para 23 municípios</p>
+              </div>
+            </div></div>
+          </a>
+          <a data-index="3" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/CBMAM_FOTO_ASSESSORIA_CREA_AM__0f0bab9a6bfa.jpeg"/>
+              <div class="slide-description">
+                <h3>Corpo de Bombeiros oferece curso em parceria com o Crea-AM para regularização de projetos e eventos</h3>
+                <p>A capacitação é voltada para engenheiros credenciados ao Conselho</p>
+              </div>
+            </div></div>
+          </a>
+          <a data-index="4" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/CBMAM_2_a7bd30663df8.jpeg"/>
+              <div class="slide-description">
+                <h3>CBMAM resgata 10 vítimas após colisão entre micro-ônibus e ônibus na Cidade Nova</h3>
+                <p>Quatro vítimas foram encaminhadas para unidades de saúde</p>
+              </div>
+            </div></div>
+          </a>
+          <a data-index="5" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/WhatsApp_Image_2026-02-19_at_1_b7c8cb9cfeaa.jpeg"/>
+              <div class="slide-description">
+                <h3>NOTA - Lancha Lima de Abreu XV</h3>
+                <p>Cinco pessoas seguem desaparecidas e três óbitos foram confirmados.</p>
+              </div>
+            </div></div>
+          </a>
+          <a data-index="6" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/WhatsApp_Image_2026-02-19_at_1_5540d5d4fb80.jpeg"/>
+              <div class="slide-description">
+                <h3>Corpo de Bombeiros encontra corpo de passageiro desaparecido em naufrágio</h3>
+                <p>Equipes de força-tarefa montada pelo Governo do Amazonas atuam desde o dia do acidente</p>
+              </div>
+            </div></div>
+          </a>
+          <a data-index="7" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/Naufr_gio_Reprodu__o_Secom_4_b89b90f4d8fd.jpg"/>
+              <div class="slide-description">
+                <h3>CBMAM segue buscas por desaparecidos em naufrágio e já percorreu mais de 10 km do rio Amazonas</h3>
+                <p>Trabalho conta com o uso de 25 militares, embarcações, drones e helicópteros</p>
+              </div>
+            </div></div>
+          </a>
+          <a data-index="8" data-slide="item" href="#">
+            <div class="slide-item"><div class="slide-content">
+              <img alt="" class="slide-image" src="assets/Governo_do_Amazonas_monta_for__d27b0206e191.jpeg"/>
+              <div class="slide-description">
+                <h3>Governo do Amazonas monta força-tarefa para resgate de vítimas de naufrágio</h3>
+                <p>Efetivos do Corpo de Bombeiros, Defesa Civil, Polícia Militar atuaram em conjunto</p>
+              </div>
+            </div></div>
+          </a>
+        </div>
+        <div class="slide-controls" data-slide="controls-wrapper"></div>
+      </div>
+    </div>
+  </div>
 
-/* Layout principal */
-.main{ padding: 20px 0 40px; }
-.layout{
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 18px;
-  align-items: start;
-}
-.content{ min-width: 0; }
-.sidebar{ min-width: 0; display: grid; gap: 14px; position: sticky; top: 14px; }
+  <!-- ============================================ -->
+  <!-- MOSAICO ACESSO À INFORMAÇÃO - PNTP 2025 -->
+  <!-- ============================================ -->
+  <div class="mosaic-section" id="acesso-informacao">
+    <div class="section-header">
+      <span class="header-icon"><i class="fas fa-info-circle"></i></span>
+      Sobre a Lei de Acesso à Informação
+    </div>
+    <div class="mosaic-grid">
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-file-alt"></i></span>
+        <span class="mosaic-label">Carta de Serviços</span>
+      </a>
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-landmark"></i></span>
+        <span class="mosaic-label">Carta de Governança</span>
+      </a>
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-project-diagram"></i></span>
+        <span class="mosaic-label">Programas e Ações</span>
+      </a>
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-gavel"></i></span>
+        <span class="mosaic-label">Licitações e Contratos</span>
+      </a>
+      <a class="mosaic-item" href="https://www.transparencia.am.gov.br" target="_blank">
+        <span class="mosaic-icon"><i class="fas fa-dollar-sign"></i></span>
+        <span class="mosaic-label">Receitas e Despesas</span>
+      </a>
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-check-circle"></i></span>
+        <span class="mosaic-label">Indicadores</span>
+      </a>
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-plane-departure"></i></span>
+        <span class="mosaic-label">Passagens e Diárias</span>
+      </a>
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-users"></i></span>
+        <span class="mosaic-label">Servidores</span>
+      </a>
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-balance-scale"></i></span>
+        <span class="mosaic-label">Balanço Patrimonial</span>
+      </a>
+      <a class="mosaic-item" href="#">
+        <span class="mosaic-icon"><i class="fas fa-chart-bar"></i></span>
+        <span class="mosaic-label">Relatório de Gestão</span>
+      </a>
+      <a class="mosaic-item" href="https://www.cbm.am.gov.br/cbmam/paginas/perguntas">
+        <span class="mosaic-icon"><i class="fas fa-question-circle"></i></span>
+        <span class="mosaic-label">Perguntas e Respostas</span>
+      </a>
+      <a class="mosaic-item" href="https://www.cbm.am.gov.br/cbmam/paginas/relatorio">
+        <span class="mosaic-icon"><i class="fas fa-clipboard-list"></i></span>
+        <span class="mosaic-label">Relatório de Auditoria</span>
+      </a>
+    </div>
+  </div>
 
-.breadcrumbs{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: var(--muted);
-  font-size: .95em;
-  margin: 6px 0 10px;
-}
-.pageTitle{ margin: 0 0 12px; font-size: 1.65em; letter-spacing: .2px; }
+  <!-- ============================================ -->
+  <!-- CONSULTA DE EDIFICAÇÕES / EVENTOS -->
+  <!-- ============================================ -->
+  <div class="consulta-section">
+    <h3>Consulta de Edificações / Eventos Regularizados</h3>
+    <p><strong>LEI FEDERAL Nº 13.425, DE 30 DE MARÇO DE 2017</strong></p>
+    <p>Art. 10. O poder público municipal e o Corpo de Bombeiros Militar manterão disponíveis, na rede mundial de computadores, informações completas sobre todos os alvarás de licença ou autorização, ou documento equivalente, laudos ou documento similar concedidos a estabelecimentos, edificações e áreas de reunião de público, com atividades permanentes ou temporárias.</p>
+    <div style="margin-top: 16px;">
+      <a class="action-link" href="https://sisgat.cbm.am.gov.br/portal/consultar-edificacoes" target="_blank">
+        <i class="fas fa-building"></i>&nbsp; Consultar Edificações
+      </a>
+      <a class="action-link" href="https://sisgat.cbm.am.gov.br/portal/consultar-eventos" target="_blank">
+        <i class="fas fa-calendar-check"></i>&nbsp; Consultar Shows e Eventos
+      </a>
+    </div>
+  </div>
 
-.panel{
-  background: rgba(17,27,46,.72);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: 0 10px 24px rgba(0,0,0,.2);
-  padding: 14px;
-  margin: 12px 0;
-}
-.panel__header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  flex-wrap: wrap;
-}
-.panel__title{ margin: 0; font-size: 1.15em; }
-.panel__tools{ display: flex; gap: 8px; }
-.pill{
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
-  color: var(--text);
-  padding: 8px 10px;
-  border-radius: 999px;
-  cursor: pointer;
-}
+  <!-- ============================================ -->
+  <!-- QUICK LINKS -->
+  <!-- ============================================ -->
+  <div class="quick-links">
+    <a class="quick-link-card" href="https://diario.imprensaoficial.am.gov.br/" target="_blank">
+      <img alt="Diário Oficial" src="assets/diario_8aa5e722c454.jpeg"/>
+    </a>
+    <a class="quick-link-card" href="https://www.transparencia.am.gov.br/" target="_blank">
+      <img alt="Portal da Transparência" src="assets/portal_e4520ec28e9a.jpeg"/>
+    </a>
+    <a class="quick-link-card" href="https://www.cbm.am.gov.br/cbmam/paginas/perguntas">
+      <img alt="Perguntas Frequentes" src="assets/perguntas_7ca971401423.jpeg"/>
+    </a>
+  </div>
+  <div class="quick-links">
+    <a class="quick-link-card" href="https://www.cbm.am.gov.br/cbmam/paginas/ouvidoria" target="_blank">
+      <img alt="Ouvidoria" src="assets/ouvidoria_f0f41748e415.png"/>
+    </a>
+    <a class="quick-link-card" href="#">
+      <img alt="Carta ao Usuário" src="assets/carta_100354baf697.jpeg"/>
+    </a>
+    <a class="quick-link-card" href="https://www.cbm.am.gov.br/cbmam/institucional/manuais">
+      <img alt="Manuais de Bombeiro" src="assets/manuais_a9339b3e0fb0.jpeg"/>
+    </a>
+  </div>
 
-/* Hero */
-.hero{
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 14px;
-}
-.hero__media{
-  min-height: 200px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(59,130,246,.45), rgba(34,197,94,.25)),
-              radial-gradient(900px 500px at 30% 30%, rgba(239,68,68,.35), transparent 60%);
-  border: 1px solid rgba(255,255,255,.10);
-}
-.hero__title{ margin: 0 0 8px; }
-.hero__actions{ display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  <!-- ============================================ -->
+  <!-- CANÇÃO DO CBMAM -->
+  <!-- ============================================ -->
+  <div class="cancao-section">
+    <h2>Canção do CBMAM</h2>
+    <video controls width="100%" style="max-width: 600px;">
+      <source src="assets/video_cancao_cbmam_863626a991ac.mp4" type="video/mp4"/>
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <br/>
+    <audio controls>
+      <source src="assets/cancao_cbmam_07823a88429e.mp3" type="audio/mpeg"/>
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <div class="media-links">
+      <a download href="https://www.cbm.am.gov.br/cbmam/webroot/videos/video_cancao_cbmam.mp4">
+        <i class="fas fa-download"></i> Download do Vídeo
+      </a>
+      <a download href="https://www.cbm.am.gov.br/cbmam/webroot/videos/cancao_cbmam.mp3">
+        <i class="fas fa-download"></i> Baixar Música
+      </a>
+      <a download href="https://www.cbm.am.gov.br/cbmam/webroot/cancao_cbmam.pdf">
+        <i class="fas fa-file-pdf"></i> Baixar Letra (PDF)
+      </a>
+    </div>
+  </div>
 
-.btn{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(239,68,68,.45);
-  background: rgba(239,68,68,.14);
-  color: var(--text);
-  text-decoration: none;
-}
-.btn:hover{ text-decoration: none; background: rgba(239,68,68,.20); }
-.btn--ghost{ border-color: var(--line); background: rgba(0,0,0,.12); }
-.btn--full{ width: 100%; }
+  <!-- ============================================ -->
+  <!-- CARDS INFORMATIVOS -->
+  <!-- ============================================ -->
+  <div class="cards-section">
+    <div class="cards-grid">
+      <a href="#" class="info-card">
+        <img alt="Unidades Operacionais" src="assets/corpo_de_bombeiros_am_logo_cir_1d4a1ebc57dc.png"/>
+        <h4>Unidades Operacionais</h4>
+        <p>Conheça as Unidades Operacionais do CBMAM.</p>
+      </a>
+      <a href="#" class="info-card">
+        <img alt="Funesbom" src="assets/funesbom_cd2cd54ebf4a.png"/>
+        <h4>Funesbom</h4>
+        <p>Fundo Especial do Corpo de Bombeiros.</p>
+      </a>
+      <a href="#" class="info-card">
+        <img alt="Dicas de Segurança" src="assets/dicas_de_incendio_5e363681c67b.jpg"/>
+        <h4>Dicas de Segurança</h4>
+        <p>Saiba como se proteger com dicas de segurança.</p>
+      </a>
+      <a href="#" class="info-card">
+        <img alt="Diretorias e Chefias" src="assets/corpo_de_bombeiros_am_logo_cir_1d4a1ebc57dc.png"/>
+        <h4>Diretorias e Chefias</h4>
+        <p>Conheça as Diretorias e Chefias do CBMAM.</p>
+      </a>
+    </div>
+  </div>
 
-/* Carousel (scroll-snap) */
-.carousel{
-  overflow: hidden;
-  border-radius: 14px;
-}
-.carousel__track{
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(240px, 1fr);
-  gap: 12px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 6px;
-  scrollbar-color: rgba(255,255,255,.25) transparent;
-}
-.carousel__track::-webkit-scrollbar{ height: 10px; }
-.carousel__track::-webkit-scrollbar-thumb{ background: rgba(255,255,255,.18); border-radius: 999px; }
+</div><!-- /content-area -->
 
-.cardNews{
-  scroll-snap-align: start;
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
-  border-radius: 14px;
-  overflow: hidden;
-  min-height: 220px;
-  display: grid;
-  grid-template-rows: 120px 1fr;
-}
-.cardNews__img{
-  background: linear-gradient(135deg, rgba(239,68,68,.3), rgba(59,130,246,.25));
-}
-.cardNews__body{ padding: 12px; }
-.cardNews__title{ margin: 0 0 6px; font-size: 1.05em; }
-.cardNews__text{ margin: 0 0 10px; color: var(--muted); }
-.cardNews__link{ font-weight: 700; }
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="sidebar-widget">
+    <a href="https://api.whatsapp.com/send?phone=5592991233129" target="_blank">
+      <img alt="Fale Conosco" src="assets/carta2_46eb81b87ac4.png" style="border-radius: 12px;"/>
+    </a>
+  </div>
 
-/* Mosaic */
-.mosaic{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
-  gap: 10px;
-}
-.mosaic__item{
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
-  border-radius: 14px;
-  padding: 12px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.mosaic__item:hover{ text-decoration: none; background: rgba(255,255,255,.06); }
+  <div class="sidebar-widget">
+    <h4>Links Úteis</h4>
+    <ul>
+      <li><a href="https://delegaciavirtual.sinesp.gov.br/portal/" target="_blank">Delegacia Virtual</a></li>
+      <li><a href="http://www.pm.am.gov.br/" target="_blank">Polícia Militar</a></li>
+      <li><a href="http://www.policiacivil.am.gov.br/" target="_blank">Polícia Civil</a></li>
+      <li><a href="http://www.detran.am.gov.br/" target="_blank">Detran</a></li>
+      <li><a href="https://www.tjam.jus.br/" target="_blank">Tribunal de Justiça do Amazonas</a></li>
+      <li><a href="https://www.prf.gov.br/" target="_blank">Polícia Rodoviária</a></li>
+      <li><a href="http://www.ssp.am.gov.br/" target="_blank">SSP-AM</a></li>
+      <li><a href="http://prodam.am.gov.br/" target="_blank">PRODAM</a></li>
+      <li><a href="https://servicos.portaldoservidor.am.gov.br/" target="_blank">Portal do Servidor</a></li>
+    </ul>
+  </div>
+</aside>
 
-/* Actions */
-.actionsRow{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.action{
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
-  padding: 12px 14px;
-  border-radius: 14px;
-  font-weight: 700;
-}
+</div><!-- /container -->
+</main>
 
-/* Media */
-.mediaGrid{
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 12px;
-}
-.mediaBox{
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
-  border-radius: 14px;
-  padding: 12px;
-}
-.mediaBox__title{ margin: 0 0 10px; }
-.audio{ width: 100%; }
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
 
-.ratio{
-  position: relative;
-  width: 100%;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.2);
-}
-.ratio--16x9{ aspect-ratio: 16/9; }
-.ratio > *{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
+  <!-- FOOTER ACCESSIBILITY BAR -->
+  <section class="footer-accessibility-bar">
+    <div class="container">
+      <div class="footer-accessibility">
+        <a class="btn-link" href="https://www.transparencia.am.gov.br/acessibilidade/" target="_blank" title="Acessibilidade">
+          <img alt="Acessibilidade" src="assets/acessibility_b68c093c3c5b.svg"/>
+        </a>
+        <button class="btn-link" title="Destacar links">
+          <img alt="Destacar links" src="assets/highlight_links_5522d07e62c1.svg"/>
+        </button>
+        <a class="btn-link" href="#" title="Contraste">
+          <img alt="Contraste" src="assets/contrast_f4e36333458f.svg"/>
+        </a>
+        <button class="btn-link" id="btnAumentar2" title="Aumentar texto">
+          <img alt="Aumentar" src="assets/text_increase_103847d47e4c.svg"/>
+        </button>
+        <button class="btn-link" id="btnnormal2" title="Restaurar texto">
+          <img alt="Restaurar" src="assets/text_normalize_0dfdcba51e14.svg"/>
+        </button>
+        <button class="btn-link" id="btnDiminuir2" title="Diminuir texto">
+          <img alt="Diminuir" src="assets/text_decrease_a2feee72be52.svg"/>
+        </button>
+        <a class="btn-link" href="https://www.cbm.am.gov.br/cbmam/paginas/mapa" title="Mapa do Site">
+          <img alt="Mapa" src="assets/map_05637faaec4f.svg"/>
+        </a>
+      </div>
+    </div>
+  </section>
 
-/* Cards grid */
-.cards{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 12px;
-}
-.infoCard{
-  border: 1px solid var(--line);
-  background: rgba(0,0,0,.12);
-  border-radius: 14px;
-  padding: 12px;
-  display: grid;
-  grid-template-columns: 46px 1fr;
-  gap: 12px;
-  align-items: start;
-}
-.infoCard:hover{ text-decoration: none; background: rgba(255,255,255,.06); }
-.infoCard__icon{
-  width: 46px; height: 46px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(34,197,94,.35), rgba(239,68,68,.25));
-}
-.infoCard__body h3{ margin: 0 0 6px; font-size: 1.05em; }
-.infoCard__body p{ margin: 0; color: var(--muted); }
+  <!-- FOOTER MAIN -->
+  <section class="footer-main">
+    <div class="container">
+      <div class="footer-col-info">
+        <p class="footer-org-name">CORPO DE BOMBEIROS MILITAR DO AMAZONAS</p>
+        <address>
+          <ul>
+            <li>Horário de atendimento: 8h às 14h</li>
+            <li>Endereço: Avenida Codajás, nº 1565, Petrópolis</li>
+            <li>E-mail: bombeirosdoamazonas@gmail.com</li>
+            <li>Telefone: (92) 9 9123-3129</li>
+            <li>CEP: 69063-390 - MANAUS- AM</li>
+            <li>CNPJ: 02.963.980/0001-53</li>
+          </ul>
+          <a class="btn-map" href="https://www.google.com/maps/place/Corpo+de+Bombeiros+Militar+do+Amazonas/@-3.118768,-59.999806,2251m/data=!3m1!1e3!4m6!3m5!1s0x926c053e4b7e5ad1:0x19a7dd2f55ad7526!8m2!3d-3.1187678!4d-59.9998059!16s%2Fg%2F11b6s78h5j?hl=pt-BR" target="_blank">
+            Ver no mapa
+          </a>
+        </address>
+        <div class="footer-social">
+          <a class="socialItem" href="https://www.instagram.com/bombeiroscbmam/" target="_blank">
+            <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+        </div>
+      </div>
 
-/* Sidebar */
-.sidePanel{
-  background: rgba(17,27,46,.72);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 14px;
-}
-.sidePanel__title{ margin: 0 0 10px; font-size: 1.05em; }
-.sidePanel__body{ display: grid; gap: 10px; }
+      <div class="footer-col-links">
+        <h4>Início</h4>
+        <ul>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/">Início</a></li>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/paginas/institucional">Institucional</a></li>
+          <li><a href="#serv">Serviços</a></li>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/paginas/concurso">Concursos</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=5592991233129" target="_blank">Fale Conosco</a></li>
+        </ul>
+      </div>
 
-.linkList{ margin: 0; padding-left: 18px; color: var(--muted); }
-.linkList a{ color: var(--text); }
+      <div class="footer-col-links">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/paginas/institucional#sobre">Sobre</a></li>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/paginas/institucional#missao">Nossa Missão</a></li>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/paginas/institucional#comando">Comando</a></li>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/institucional/legislacao_interna">Legislação Interna</a></li>
+        </ul>
+      </div>
 
-/* Footer */
-.footer{ border-top: 1px solid var(--line); margin-top: 28px; }
-.footer__top{
-  background: rgba(15,23,42,.95);
-  padding: 26px 0;
-}
-.footer__grid{
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 16px;
-}
-.footer__title{ margin: 0 0 10px; font-size: 1.05em; }
-.footer__list{ margin: 0; padding-left: 18px; color: var(--muted); }
-.footer__list a{ color: var(--text); }
+      <div class="footer-col-links">
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="https://www.cbm.am.gov.br/cbmam/transparencias/index2">Entrar</a></li>
+          <li><a href="#">Cadastrar</a></li>
+        </ul>
+      </div>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-.footer__bottom{
-  background: rgba(0,0,0,.25);
-  padding: 12px 0;
-}
-.footer__bottomInner{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-.toTop{ color: var(--text); }
+  <!-- COPYRIGHT -->
+  <div class="footer-copyright">
+    <p>Copyright © 2026<br/>Desenvolvido por BM-6/EMG</p>
+  </div>
 
-/* Responsivo */
-@media (max-width: 980px){
-  .layout{ grid-template-columns: 1fr; }
-  .sidebar{ position: static; }
-  .hero{ grid-template-columns: 1fr; }
-  .mediaGrid{ grid-template-columns: 1fr; }
-  .mosaic{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-}
+</footer>
 
-@media (max-width: 720px){
-  .menuToggle{ display: inline-flex; }
-  .nav__list{
-    display: none;
-    width: 100%;
-    padding: 10px 0 6px;
+<!-- ===== SCRIPTS ===== -->
+<script src="assets/slides_8b95226899b9.js"></script>
+<script>
+  // Carousel init
+  initSlider({
+    autoPlay: true,
+    startAtIndex: 0,
+    timeInterval: 3000
+  });
+
+  // Mobile menu toggle
+  document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('active');
+    var isExpanded = this.textContent === '✕';
+    this.textContent = isExpanded ? '☰' : '✕';
+  });
+
+  // Font size controls
+  var $btnAumentar = $("#btnAumentar, #btnAumentar2");
+  var $btnDiminuir = $("#btnDiminuir, #btnDiminuir2");
+  var $btnnormal = $("#btnnormal, #btnnormal2");
+  var $textEls = $("body p, body a, body li, body h3, body h4, body span");
+
+  function getFontSize() {
+    return parseFloat($("body").css('font-size'));
   }
-  .nav__list.is-open{ display: grid; gap: 6px; }
-  .subnav{
-    position: static;
-    display: none;
-    margin-top: 6px;
-  }
-  .nav__item--open > .subnav{ display: grid; }
-  .cards{ grid-template-columns: 1fr; }
-  .footer__grid{ grid-template-columns: 1fr; }
-}
 
-/* Contraste (acessibilidade) */
-body.is-contrast{
-  --bg: #000;
-  --surface: #000;
-  --surface2: #000;
-  --text: #fff;
-  --muted: #fff;
-  --line: rgba(255,255,255,.65);
-  --brand: #ffd400;
-}
+  $btnAumentar.on('click', function() {
+    var size = getFontSize();
+    if (size < 24) {
+      $("body").css('font-size', (size + 1) + 'px');
+    }
+  });
+
+  $btnDiminuir.on('click', function() {
+    var size = getFontSize();
+    if (size > 12) {
+      $("body").css('font-size', (size - 1) + 'px');
+    }
+  });
+
+  $btnnormal.on('click', function() {
+    $("body").css('font-size', '16px');
+  });
+</script>
+
+</body>
+</html>
