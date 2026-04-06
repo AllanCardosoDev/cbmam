@@ -20,6 +20,17 @@ import re
 warnings.filterwarnings('ignore')
 
 # ══════════════════════════════════════════════════════════════════════════════
+# STREAMLIT CONFIG (DEVE SER PRIMEIRA!)
+# ══════════════════════════════════════════════════════════════════════════════
+
+st.set_page_config(
+    page_title="Dashboard TAF CBMAM",
+    page_icon="🚒",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+# ══════════════════════════════════════════════════════════════════════════════
 # IMAGEM CBMAM
 # ══════════════════════════════════════════════════════════════════════════════
 @st.cache_data
@@ -500,17 +511,6 @@ if df.empty:
     st.error("Erro: Não foi possível carregar os dados. Verifique os arquivos de dados.")
     st.stop()
 
-# ══════════════════════════════════════════════════════════════════════════════
-# STREAMLIT CONFIG
-# ══════════════════════════════════════════════════════════════════════════════
-
-st.set_page_config(
-    page_title="Dashboard TAF CBMAM",
-    page_icon="🚒",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-
 # Custom CSS
 st.markdown(
     """
@@ -638,7 +638,7 @@ top_20 = df_filtrado.nlargest(20, 'Média_Final')[['Nome Completo', 'Posto/Gradu
 top_20.index = top_20.index + 1
 
 st.dataframe(
-    top_20.style.background_gradient(subset=['Média_Final'], cmap='RdYlGn', vmin=0, vmax=10),
+    top_20,
     use_container_width=True
 )
 
