@@ -16,6 +16,7 @@ import plotly.graph_objects as go
 from datetime import datetime
 import warnings
 import re
+import unicodedata
 
 warnings.filterwarnings('ignore')
 
@@ -232,6 +233,13 @@ REGRAS_FEMININO = {
 # ══════════════════════════════════════════════════════════════════════════════
 # FUNÇÕES DE CÁLCULO
 # ══════════════════════════════════════════════════════════════════════════════
+
+def remover_acentos(texto):
+    """Remove acentos de um texto para melhor matching de nomes"""
+    if pd.isna(texto):
+        return ''
+    texto_norm = unicodedata.normalize('NFKD', str(texto))
+    return ''.join([c for c in texto_norm if not unicodedata.combining(c)]).upper().strip()
 
 def calcular_idade(data_nascimento):
     """Calcula idade a partir de data de nascimento (formato DD/MM/YYYY)"""
@@ -455,8 +463,8 @@ def carregar_dados():
                 col_barra = col
         
         # 4. Fundir dados: TAF com Militares
-        df_taf['Nome_TAF'] = df_taf[col_nome].str.strip().str.upper() if col_nome else ''
-        df_militares['Nome_Upper'] = df_militares['Nome Completo'].str.strip().str.upper()
+        df_taf['Nome_TAF'] = df_taf[col_nome].apply(remover_acentos) if col_nome else ''
+        df_militares['Nome_Upper'] = df_militares['Nome Completo'].apply(remover_acentos)
         
         df_merged = df_taf.merge(df_militares[['Nome Completo', 'Nome_Upper', 'Sexo', 'Data de Nascimento', 'Posto/Graduação', 'Quadro']], 
                                  left_on='Nome_TAF', right_on='Nome_Upper', how='left')
